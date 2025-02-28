@@ -69,28 +69,28 @@ public class testNhanVien {
 
     // Tuoi min 18 - 70
     @Test
-    public void suaNhanVien_Tuoi(){
+    public void suaNhanVien_TuoiFalse(){
         boolean ketQua = service.sua(nv2,"A",17,1000000,2,"IT");
         Assertions.assertTrue(ketQua);
     }
 
     // Luong min 1tr - 200tr
     @Test
-    public void suaNhanVien_Luong(){
+    public void suaNhanVien_LuongFalse(){
         boolean ketQua = service.sua(nv2,"A",25,999999,2,"IT");
         Assertions.assertTrue(ketQua);
     }
 
     // Tham nien 1 - 50
     @Test
-    public void suaNhanVien_Nam(){
+    public void suaNhanVien_NamFalse(){
         boolean ketQua = service.sua(nv2,"A",25,2000000,0,"IT");
         Assertions.assertTrue(ketQua);
     }
 
     // PhongBan
     @Test
-    public void suaNhanVien_PhongBan(){
+    public void suaNhanVien_PhongBanNull(){
         boolean ketQua = service.sua(nv2,"A",25,2000000,20,"");
         Assertions.assertTrue(ketQua);
     }
